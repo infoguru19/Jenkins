@@ -6,7 +6,7 @@ pipeline {
                 sh """
                     echo "Hello World"
                     echo "This is a multiple line shell script"
-                    echo "This is the last line"
+                    echo "This is the last line!"
                 """
             }
         }
