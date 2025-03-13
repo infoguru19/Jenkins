@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages{
+        stage ("Demo Function"){
+            steps{
+                demoFunction("Jenkins")
+            }
+        }
+    }
+}
+
+def demoFunction(String name){
+    echo "Hello ${name}"
+}
