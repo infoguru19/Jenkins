@@ -1,0 +1,13 @@
+pipeline{
+    agent any
+    parameters{
+        choice(choices: ["TEST", "DEV", "PRD"], description: 'Which Env', name: 'envType')
+    }
+    stages{
+        stage("String Demo"){
+            steps{
+                echo "Which Environment to deploy: ${params.envType}"
+            }
+        }
+    }
+}

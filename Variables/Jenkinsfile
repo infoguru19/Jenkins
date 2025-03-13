@@ -1,0 +1,18 @@
+pipeline{
+    agent any
+
+    environment{
+        def myVar = "Hello World"
+        def myNumber = 10
+        def myBoolean = true
+    }
+    stages{
+        stage("Variable Demo"){
+            steps{
+                echo "String: ${myVar}"
+                echo "Number: ${myNumber}"
+                echo "Boolean: ${myBoolean}"
+            }
+        }
+    }
+}

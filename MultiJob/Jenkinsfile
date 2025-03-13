@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    stages{
+        stage("Multiple Shell"){
+            steps{
+                sh """
+                    echo "Hello World"
+                    echo "This is a multiple line shell script"
+                    echo "This is the last line"
+                """
+            }
+        }
+        stage("Build Remote: 1"){
+            steps{
+                build "Function"
+            }
+        }
+        stage("Build Remote: 2"){
+            steps{
+                build job: "booleanParam", parameters: [[$class: 'BooleanParameterValue', name: 'myBoolean', value: true]]
+            }
+        }
+    }
+}
