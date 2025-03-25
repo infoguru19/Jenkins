@@ -25,6 +25,7 @@ Declarative Pipeline Syntax
 ================================
 - Declarative Pipeline is a more simplified and opinionated syntax. It uses a pipeline block to define the entire pipeline.
 
+<sub>
 pipeline {
     agent any
     stages {
@@ -45,7 +46,7 @@ pipeline {
         }
     }
 }
-
+</sub>
 
 Scripted Pipeline Syntax
 ===========================
